@@ -68,16 +68,16 @@ var P1 = {
             if(toucheSPACE.isDown){
                 control1 = true;
                 if(control1 == true){
-                    ball.body.velocity.x = 0;   
+                    ball.body.velocity.x = 0;
+                    reduce(trans1);   
                 }
             }else{
                 if(control1 == true){
                     control1 = false;
                     ball.body.velocity.x = 300;
+                    scale(trans1);
                 }
             } 
-        }else{
-        
         }
 
 
@@ -86,10 +86,10 @@ var P1 = {
 
 
 function reduce(trans){
-    //;
+
     var t = game.add.tween(trans.scale).to( { x: 0.1, y: 0.1 }, 300, Phaser.Easing.Linear.None,true);
     t.onComplete.add(function(){
-        scale(trans1);
+        scale(trans);
     }, this)
 }
 function scale(trans){
@@ -151,16 +151,17 @@ var P2 = {
                 control2 = true;
                 if(control2 == true){
                     ball.body.velocity.x = 0; 
-
+                    reduce(trans2);
                 }
             }else{
                 if(control2 == true){
                     control2 = false;
                     ball.body.velocity.x = -300;
+                    scale(trans2);
                 }
             } 
-        }else{
-            
-        }      
+        }
+
+
     }
 }

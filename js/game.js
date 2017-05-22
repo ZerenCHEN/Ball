@@ -7,7 +7,8 @@ var game = new Phaser.Game(
 	'', 
 	{ preload: preload, 
 	  create: create, 
-	  update: update
+	  update: update,
+	  render: render
 	});
 
 
@@ -103,11 +104,12 @@ function Keyboard(){
     toucheZ = game.input.keyboard.addKey(Phaser.Keyboard.Z);
     toucheS = game.input.keyboard.addKey(Phaser.Keyboard.S);
     toucheSPACE = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
-    toucheSPACE.onDown.add(function(){reduce(trans1);})
+    toucheSPACE.onDown.add(function(){reduce(trans1);});
     
     toucheK = game.input.keyboard.addKey(Phaser.Keyboard.K);
 	toucheM = game.input.keyboard.addKey(Phaser.Keyboard.M);
 	toucheO = game.input.keyboard.addKey(Phaser.Keyboard.O);
 	toucheL = game.input.keyboard.addKey(Phaser.Keyboard.L);
     toucheENTER = game.input.keyboard.addKey(Phaser.Keyboard.ENTER);
+    toucheENTER.onDown.add(function(){reduce(trans2);});
 }	
