@@ -21,14 +21,37 @@ a.acceder {
 	text-decoration: none;
 	font-size: 40px;
 	padding: 10px 100px 10px 100px;
-	margin-bottom: 35px;
 	display: inline-block;
+	border-style: solid;
+	border-color: black;
 	border-radius: 10px 10px 10px 10px;
 	-moz-border-radius: 10px 10px 10px 10px;
 	-webkit-border-radius: 10px 10px 10px 10px;
+	box-shadow:10px 10px 10px #151515;
+	-moz-box-shadow:10px 10px 10px #151515;
+	-webkit-box-shadow:10px 10px 10px #151515;
+}
+a.acceder:hover{
+	font-family: quicksand;
+	color: white;
+	text-align: center;
+	background-color: black;
+	text-decoration: none;
+	font-size: 40px;
+	padding: 10px 100px 10px 100px;
+	display: inline-block;
+	border-style: solid;
+	border-color: white;
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	box-shadow: 10px 10px 10px #151515;
+	-moz-box-shadow: 10px 10px 10px #151515;
+	-webkit-box-shadow: 10px 10px 10px #151515;
 }
 
 p.descr {
+	margin-top: 35px;
 	font-family: quicksand;
 	color: white;
 	font-size: 20px;
