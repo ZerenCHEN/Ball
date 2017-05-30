@@ -11,7 +11,15 @@ Jeu de dexterité et de timing ou l'utilisateur doit récuperer la balle et la l
 * Le joueur perd une vie si il attrape la balle sur le mauvais timing
 
 ### CONTROLES
-![wireframe](https://preview.ibb.co/mdfm3F/Sans_titre20170529103047.png "wireframe 1")
+![alt text](https://github.com/ZerenCHEN/SpaceBall/tree/master/img/gif/control.gif) 
+ Déplacement :
+ * Joueur1 : Z/Q/S/D 
+ * Joueur2 : O/K/L/M
+![alt text](https://github.com/ZerenCHEN/SpaceBall/tree/master/img/gif/control_ball.gif)
+ Reception et lancer de la balle + direction de la ball lors de la reception (joueur immobile) : 
+  * Joueur1 : barre d'espace (appuyer, maintenir et relâcher) + Q/D
+  * Joueur2 : touche Entrer (appuyer, maintenir et relâcher) + K/M
+
 
 #### Technologies
 * Phaser
@@ -22,3 +30,8 @@ Jeu de dexterité et de timing ou l'utilisateur doit récuperer la balle et la l
 * Systeme de deplacement
 * Ramassage et lancer de la balle
 * Menu Principal
+
+Système manquante : 
+* Une meilleur feed back pour la mort du personnage 
+* un compteur de reception
+* //design graphique
