@@ -13,6 +13,12 @@ h1 {
 	padding-top: 5px;
 	padding-bottom: 25px;
 }
+
+#game{
+	position : absolute;
+	z-index: -1;
+}
+
 a.retour {
 	font-family: quicksand;
 	color: black;

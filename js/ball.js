@@ -26,7 +26,7 @@ var BALL = {
     },
     ball_effect : function(){
     	if(reception_counter <= 15){
-    		ball.scale.setTo(0.1 + 0.01 * reception_counter,0.1 + 0.01 * reception_counter);
+    		ball.scale.setTo(0.1 + 0.02 * reception_counter,0.1 + 0.02 * reception_counter);
     	}
     	
     	if(control1 == true || control2){

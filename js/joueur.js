@@ -49,16 +49,21 @@ var P1 = {
             if(checkOverlap(trans1, ball) && control1 == false){
                 control1 = true;
                 reception_counter ++;
+
+                sd_recept.play();
             }
             if(control1 == false){
                 reducesacle1(trans1);
+                sd_fail.play();
             }
         }else{
             if(control1 == true){
                 control1 = false;
-                ball.body.velocity.x = (ball.x - player1.x) * (5 + 0.5 * reception_counter);
-                ball.body.velocity.y = (ball.y - player1.y) * (5 + 0.5 * reception_counter);
+                ball.body.velocity.x = (ball.x - player1.x) * (5 + 0.8 * reception_counter);
+                ball.body.velocity.y = (ball.y - player1.y) * (5 + 0.8 * reception_counter);
                 scale(trans1);
+
+                sd_lancer.play();
             }
         }
         
@@ -111,16 +116,21 @@ var P2 = {
             if(checkOverlap(trans2, ball) && control2 == false){
                 control2 = true;
                 reception_counter++;
+
+                sd_recept.play();
             }
             if(control2 == false){
                 reducesacle2(trans2);
+                sd_fail.play();
             }
         }else{
             if(control2 == true){
                 control2 = false;
-                ball.body.velocity.x = (ball.x - player2.x) * (5 + 0.5 * reception_counter);
-                ball.body.velocity.y = (ball.y - player2.y) * (5 + 0.5 * reception_counter);
+                ball.body.velocity.x = (ball.x - player2.x) * (5 + 0.8 * reception_counter);
+                ball.body.velocity.y = (ball.y - player2.y) * (5 + 0.8 * reception_counter);
                 scale(trans2);
+
+                sd_lancer.play();
             }
         }
 

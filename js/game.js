@@ -14,23 +14,32 @@ var game = new Phaser.Game(
 /* variable */
 
 var counter = 0;
-var emitter;
+
+var cadre_gauche;
+var cadre_droit;
+
 
 //////////////////////////////////////////////
 // Preload()
 function preload() {
 	game.load.spritesheet('pixel', 'img/pixel.png', 4, 4);
+	game.load.spritesheet('cadre_gauche', 'img/cadre_gauche.png', 43, 680);
+	game.load.spritesheet('cadre_droit', 'img/cadre_droit.png', 44, 680);
+	
 
 	P1.preload();
 	P2.preload();
 	
 	BALL.preload();
 	LIFE.preload();	
+
+	soundPreload();
 }
 
 //////////////////////////////////////////////
 // Create()
 function create() {
+	/* particule étoilé background*/ 
 	var emitter = game.add.emitter(game.world.centerX, window.innerHeight, 400);
 
 	emitter.width = game.world.width;
@@ -48,19 +57,29 @@ function create() {
 
 	//emitter.gravity = -100;
 	emitter.setRotation(0, 0);
-	emitter.start(false, 2800, 280); // start, durée de vie, quantité,
+	emitter.start(false, 2800, 280); // start, durée de vie/ distance, quantité,
 
+
+
+	/* cadre violet graphique sur le jeu*/
+	cadre_gauche = game.add.sprite(window.innerWidth * 0.215, window.innerHeight * 0.2, 'cadre_gauche');
+	cadre_gauche.scale.setTo(0.8, 0.7);
+	cadre_droit = game.add.sprite(window.innerWidth * 0.765, window.innerHeight * 0.2, 'cadre_droit');
+	cadre_droit.scale.setTo(0.8, 0.7);
+
+	/* éléments du game */
 	game.physics.startSystem(Phaser.Physics.ARCADE);
 	game.stage.backgroundColor = '#1E1E28';
 	
 	P1.sprite();
+
 	P2.sprite();
 	BALL.sprite();
 
-	Keyboard();	
-
 	LIFE.sprite();
 
+	Keyboard();	
+	soundCreate();	
 }
 
 
@@ -76,10 +95,11 @@ function update() {
 	position_recadrage(trans1, player1);
 	position_recadrage(trans2, player2);
 
+	distance_cercle();
+
 	LIFE.life();
 	LIFE.gameover();
-
-	distance_cercle();
+	playsound();
 }
 
 
