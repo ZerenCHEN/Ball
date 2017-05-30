@@ -12,11 +12,13 @@ Jeu de dexterité et de timing ou le joueur doit récuperer la balle et la lance
 
 ### CONTROLES
 ![demo](img/gif/control.gif)<br/>
- Déplacement :
+Déplacement :
   * Joueur1 : Z/Q/S/D 
   * Joueur2 : O/K/L/M<br/>
+
+
 ![demo](img/gif/control_ball.gif)<br/>
- Reception et lancer de la balle + direction de la ball lors de la reception (joueur immobile) : 
+Reception et lancer de la balle + direction de la ball lors de la reception (joueur immobile) : 
   * Joueur1 : barre d'espace (appuyer, maintenir et relâcher) + Q/D
   * Joueur2 : touche Entrer (appuyer, maintenir et relâcher) + K/M
   
