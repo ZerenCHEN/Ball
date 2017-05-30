@@ -1,13 +1,13 @@
 # Version 1.0
 ## SpaceBall
-### Jeu de tir dans l'espace
+### Jeu de dextérité dans l'espace
 
-Jeu de dexterité et de timing ou le joueur doit récuperer la balle et la lancer sur son adversaire.
+Jeu de dexterité et de timing où le joueur doit récuperer la balle et la lancer sur son adversaire.
 
 #### Règles
-* Nombre d'utilisateurs : 2 
-* Les joueurs ont 3 vie chacun
-* Chaque joueur devra récupérer la balle que lui lance son adversaire afin de lui renvoyer
+* Nombre de joueurs : 2 
+* 3 vies chacun
+* Récupérer la balle que lui lance son adversaire afin de lui renvoyer
 * Le joueur perd une vie s'il attrape la balle sur le mauvais timing
 
 ### CONTROLES
@@ -18,9 +18,9 @@ Déplacement :
 
 
 ![demo](img/gif/control_ball.gif)<br/>
-Reception et lancer de la balle + direction de la ball lors de la reception (joueur immobile) : 
-  * Joueur1 : barre d'espace (appuyer, maintenir et relâcher) + Q/D
-  * Joueur2 : touche Entrer (appuyer, maintenir et relâcher) + K/M
+Reception et lancer de la balle + direction de la ball lors de la reception (joueur devient alors immobile) : 
+  * Joueur1 : barre d'espace (appuyer, maintenir et relâcher) + Q/D (direction de la balle)
+  * Joueur2 : touche Entrer (appuyer, maintenir et relâcher) + K/M (direction de la balle)
   
 #### Technologies
 * Phaser
